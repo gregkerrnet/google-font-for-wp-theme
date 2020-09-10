@@ -4,41 +4,41 @@ function snazzy_theme_customizer( $wp_customize ) {
 
 	$wp_customize->add_section( 'snazzy_google_fonts_section', array(
 		'title'           => __( 'Fonts', 'snazzy' ),
-		'description'     => __( 'Select Google Fonts from the pull-down menu.', 'snazzy' ),
-		'priority'        => 30,
+		'description'     => __( 'Select Google Fonts from the pull-down menus.', 'snazzy' ),
+		'priority'        => 29,
 	) );
 
 		$font_choices = array(
-			'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',
-			'Open Sans:400italic,700italic,400,700' => 'Open Sans',
-			'Oswald:400,700' => 'Oswald',
-			'Playfair Display:400,700,400italic' => 'Playfair Display',
-			'Montserrat:400,700' => 'Montserrat',
-			'Raleway:400,700' => 'Raleway',
-			'Droid Sans:400,700' => 'Droid Sans',
-			'Lato:400,700,400italic,700italic' => 'Lato',
 			'Arvo:400,700,400italic,700italic' => 'Arvo',
-			'Lora:400,700,400italic,700italic' => 'Lora',
-			'Merriweather:400,300italic,300,400italic,700,700italic' => 'Merriweather',
-			'Oxygen:400,300,700' => 'Oxygen',
-			'PT Serif:400,700' => 'PT Serif',
-			'PT Sans:400,700,400italic,700italic' => 'PT Sans',
-			'PT Sans Narrow:400,700' => 'PT Sans Narrow',
+			'Arimo:400,700,400italic,700italic' => 'Arimo',		
+			'Bitter:400,700,400italic' => 'Bitter',	
 			'Cabin:400,700,400italic' => 'Cabin',
+			'Droid Sans:400,700' => 'Droid Sans',
+			'Droid Serif:400,700,400italic,700italic' => 'Droid Serif',			
 			'Fjalla One:400' => 'Fjalla One',
 			'Francois One:400' => 'Francois One',
 			'Josefin Sans:400,300,600,700' => 'Josefin Sans',
-			'Libre Baskerville:400,400italic,700' => 'Libre Baskerville',
-			'Arimo:400,700,400italic,700italic' => 'Arimo',
-			'Ubuntu:400,700,400italic,700italic' => 'Ubuntu',
-			'Bitter:400,700,400italic' => 'Bitter',
-			'Droid Serif:400,700,400italic,700italic' => 'Droid Serif',
+			'Lato:400,700,400italic,700italic' => 'Lato',
+			'Libre Baskerville:400,400italic,700' => 'Libre Baskerville',			
+			'Lora:400,700,400italic,700italic' => 'Lora',			
+			'Merriweather:400,300italic,300,400italic,700,700italic' => 'Merriweather',
+			'Montserrat:400,700' => 'Montserrat',
+			'Open Sans:400italic,700italic,400,700' => 'Open Sans',
+			'Open Sans Condensed:700,300italic,300' => 'Open Sans Condensed',			
+			'Oswald:400,700' => 'Oswald',
+			'Oxygen:400,300,700' => 'Oxygen',
+			'Playfair Display:400,700,400italic' => 'Playfair Display',
+			'PT Sans:400,700,400italic,700italic' => 'PT Sans',
+			'PT Sans Narrow:400,700' => 'PT Sans Narrow',
+			'PT Serif:400,700' => 'PT Serif',			
+			'Raleway:400,700' => 'Raleway',		
 			'Roboto:400,400italic,700,700italic' => 'Roboto',
-			'Open Sans Condensed:700,300italic,300' => 'Open Sans Condensed',
 			'Roboto Condensed:400italic,700italic,400,700' => 'Roboto Condensed',
 			'Roboto Slab:400,700' => 'Roboto Slab',
+			'Rokkitt:400' => 'Rokkitt',			
+			'Source Sans Pro:400,700,400italic,700italic' => 'Source Sans Pro',
+			'Ubuntu:400,700,400italic,700italic' => 'Ubuntu',
 			'Yanone Kaffeesatz:400,700' => 'Yanone Kaffeesatz',
-			'Rokkitt:400' => 'Rokkitt',
 		);
 
 		$wp_customize->add_setting( 'snazzy_headings_fonts', array(
@@ -66,5 +66,4 @@ function snazzy_theme_customizer( $wp_customize ) {
 				'choices' => $font_choices
 			)
 		);
-	}
 }
