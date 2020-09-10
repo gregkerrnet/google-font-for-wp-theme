@@ -48,7 +48,7 @@ function snazzy_theme_customizer( $wp_customize ) {
 
 		$wp_customize->add_control( 'snazzy_headings_fonts', array(
 				'type' => 'select',
-				'description' => __('Select your desired font for the headings.', 'snazzy'),
+				'description' => __('Select the font for the headings.', 'snazzy'),
 				'section' => 'snazzy_google_fonts_section',
 				'choices' => $font_choices
 			)
@@ -61,7 +61,7 @@ function snazzy_theme_customizer( $wp_customize ) {
 
 		$wp_customize->add_control( 'snazzy_body_fonts', array(
 				'type' => 'select',
-				'description' => __( 'Select your desired font for the body.', 'snazzy' ),
+				'description' => __( 'Select the font for the body.', 'snazzy' ),
 				'section' => 'snazzy_google_fonts_section',
 				'choices' => $font_choices
 			)
