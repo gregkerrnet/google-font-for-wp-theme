@@ -1,3 +1,5 @@
+// This creates the Google Fonts pull-down menu in The Customizer
+
 function snazzy_theme_customizer( $wp_customize ) {
 
 // Theme Customizer -- Fonts Section
@@ -67,3 +69,28 @@ function snazzy_theme_customizer( $wp_customize ) {
 			)
 		);
 }
+
+
+// This enqueues the Google Font stylesheets
+
+function snazzy_scripts() {
+
+	/* Google Font Stylesheet choices from Customizer */
+	$headings_font = esc_html(get_theme_mod('snazzy_headings_fonts'));
+	$body_font = esc_html(get_theme_mod('snazzy_body_fonts'));
+
+	if( $headings_font ) {
+		wp_enqueue_style( 'snazzy-headings-fonts', 'https://fonts.googleapis.com/css?family='. $headings_font );
+	} else {
+		wp_enqueue_style( 'snazzy-source-sans', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+	}
+	if( $body_font ) {
+		wp_enqueue_style( 'snazzy-body-fonts', 'https://fonts.googleapis.com/css?family='. $body_font );
+	} else {
+		wp_enqueue_style( 'snazzy-source-body', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,700,600');
+	}
+}
+
+add_action('wp_enqueue_scripts','snazzy_scripts');
+
+// Note that this code does not include the wp_head action hook or wp_add_inline_style() function to output the CSS to the site.
